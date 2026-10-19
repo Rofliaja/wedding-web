@@ -1,0 +1,82 @@
+/* ==================== CUSTOM STYLES & ANIMATIONS ==================== */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for Wishes Container */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #dfc3a2;
+    border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #b78b58;
+}
+
+/* Spin Slow Animation for Audio Disc */
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.spin-slow {
+    animation: spin-slow 8s linear infinite;
+}
+.spin-paused {
+    animation-play-state: paused !important;
+}
+
+/* Floating Floral Petal Styles */
+.petal {
+    position: absolute;
+    background-color: #ffd1dc;
+    border-radius: 150% 0 150% 0;
+    opacity: 0.7;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+        transform: translateX(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        top: 105%;
+        transform: translateX(120px) rotate(360deg);
+        opacity: 0.1;
+    }
+}
+
+/* Fade in animation for modal */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Bottom Nav Active Link Indicator */
+.nav-link.active {
+    color: #b78b58 !important;
+    font-weight: 600;
+}
